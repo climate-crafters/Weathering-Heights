@@ -11,6 +11,7 @@
 		38F2CADA2C31948A00AA9A38 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F2CAD92C31948A00AA9A38 /* SignInView.swift */; };
 		38F2CADF2C31DEC400AA9A38 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F2CADE2C31DEC400AA9A38 /* View+Extensions.swift */; };
 		38F2CAE12C31ED8A00AA9A38 /* CustomTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F2CAE02C31ED8A00AA9A38 /* CustomTF.swift */; };
+		38F2CAE32C31F5BC00AA9A38 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F2CAE22C31F5BC00AA9A38 /* GradientButton.swift */; };
 		5EC50A422C306620006C137C /* Weathering_HeightsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC50A412C306620006C137C /* Weathering_HeightsApp.swift */; };
 		5EC50A442C306620006C137C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC50A432C306620006C137C /* ContentView.swift */; };
 		5EC50A462C306621006C137C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EC50A452C306621006C137C /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		38F2CAD92C31948A00AA9A38 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		38F2CADE2C31DEC400AA9A38 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		38F2CAE02C31ED8A00AA9A38 /* CustomTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTF.swift; sourceTree = "<group>"; };
+		38F2CAE22C31F5BC00AA9A38 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		5EC50A3E2C306620006C137C /* Weathering Heights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weathering Heights.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC50A412C306620006C137C /* Weathering_HeightsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weathering_HeightsApp.swift; sourceTree = "<group>"; };
 		5EC50A432C306620006C137C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			children = (
 				38F2CAD92C31948A00AA9A38 /* SignInView.swift */,
 				38F2CAE02C31ED8A00AA9A38 /* CustomTF.swift */,
+				38F2CAE22C31F5BC00AA9A38 /* GradientButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38F2CAE32C31F5BC00AA9A38 /* GradientButton.swift in Sources */,
 				5EC50A442C306620006C137C /* ContentView.swift in Sources */,
 				389CFBDB2C31814900168A2D /* SignUp.swift in Sources */,
 				38F2CAE12C31ED8A00AA9A38 /* CustomTF.swift in Sources */,

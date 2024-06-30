@@ -38,6 +38,10 @@ struct SignInView: View {
                 .fontWeight(.heavy)
                 .tint(Color(UIColor(red: 254/255, green: 206/255, blue: 57/255, alpha: 1)))
                 .hSpacing(.trailing)
+                
+                GradientButton(title: "Login", icon: "arrow.right") {
+                    
+                }
             }
             .padding(.top, 20)
             
