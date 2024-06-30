@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		389CFBDB2C31814900168A2D /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389CFBDA2C31814900168A2D /* SignUp.swift */; };
 		5EC50A422C306620006C137C /* Weathering_HeightsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC50A412C306620006C137C /* Weathering_HeightsApp.swift */; };
 		5EC50A442C306620006C137C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC50A432C306620006C137C /* ContentView.swift */; };
 		5EC50A462C306621006C137C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EC50A452C306621006C137C /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		389CFBDA2C31814900168A2D /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		5EC50A3E2C306620006C137C /* Weathering Heights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weathering Heights.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC50A412C306620006C137C /* Weathering_HeightsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weathering_HeightsApp.swift; sourceTree = "<group>"; };
 		5EC50A432C306620006C137C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				5EC50A412C306620006C137C /* Weathering_HeightsApp.swift */,
 				5EC50A432C306620006C137C /* ContentView.swift */,
+				389CFBDA2C31814900168A2D /* SignUp.swift */,
 				5EC50A452C306621006C137C /* Assets.xcassets */,
 				5EC50A472C306621006C137C /* Preview Content */,
 			);
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EC50A442C306620006C137C /* ContentView.swift in Sources */,
+				389CFBDB2C31814900168A2D /* SignUp.swift in Sources */,
 				5EC50A422C306620006C137C /* Weathering_HeightsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
