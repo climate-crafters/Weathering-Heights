@@ -43,7 +43,7 @@ struct ContentView: View {
                     Divider()
                     Divider()
                     
-                    NavigationLink(destination: SignUp()) { Text("Next →")
+                    NavigationLink(destination: Login_SignUp()) { Text("Next →")
                     }
                     .frame(width: 200, height: 50, alignment: .center)
                     .background(Color(UIColor(red: 100/255, green: 100/255, blue: 100/255, alpha: 1)))
