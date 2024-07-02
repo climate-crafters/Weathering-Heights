@@ -11,6 +11,9 @@ struct Login_SignUp: View {
     /// View Properties
     @State private var showSignup: Bool = false
     var body: some View {
+        Spacer()
+            .navigationBarBackButtonHidden(true)
+        
         NavigationStack {
             Login(showSignup: $showSignup)
                 .navigationDestination(isPresented: $showSignup) {
