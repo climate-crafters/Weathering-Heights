@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		387EB8AB2C345E56001C0C28 /* Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387EB8AA2C345E56001C0C28 /* Intro.swift */; };
 		38E657162C344188004B5F0D /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E657142C344188004B5F0D /* View+Extensions.swift */; };
 		38E6571C2C344194004B5F0D /* CustomTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E657172C344194004B5F0D /* CustomTF.swift */; };
 		38E6571D2C344194004B5F0D /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E657182C344194004B5F0D /* GradientButton.swift */; };
@@ -41,7 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		387EB8AA2C345E56001C0C28 /* Intro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Intro.swift; sourceTree = "<group>"; };
 		38E657142C344188004B5F0D /* View+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		38E657172C344194004B5F0D /* CustomTF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTF.swift; sourceTree = "<group>"; };
 		38E657182C344194004B5F0D /* GradientButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 			children = (
 				5EC50A412C306620006C137C /* Weathering_HeightsApp.swift */,
 				5EC50A432C306620006C137C /* ContentView.swift */,
-				387EB8AA2C345E56001C0C28 /* Intro.swift */,
 				38E657202C34419D004B5F0D /* Login_SignUp.swift */,
 				38E657152C344188004B5F0D /* Helpers */,
 				5EC50A452C306621006C137C /* Assets.xcassets */,
@@ -296,7 +293,6 @@
 			files = (
 				38E6571F2C344194004B5F0D /* Signup.swift in Sources */,
 				38E6571D2C344194004B5F0D /* GradientButton.swift in Sources */,
-				387EB8AB2C345E56001C0C28 /* Intro.swift in Sources */,
 				5EC50A442C306620006C137C /* ContentView.swift in Sources */,
 				38E657212C34419D004B5F0D /* Login_SignUp.swift in Sources */,
 				38E657162C344188004B5F0D /* View+Extensions.swift in Sources */,
