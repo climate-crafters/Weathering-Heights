@@ -14,6 +14,8 @@ struct SignUp: View {
     @State private var fullName: String = ""
     @State private var password: String = ""
     @State private var ConfirmPassword: String = ""
+    
+    @State var emailIdIsValid: Bool = true
    
     var body: some View {
         VStack(alignment: .leading, spacing: 15, content: {
@@ -41,6 +43,17 @@ struct SignUp: View {
             VStack(spacing: 25) {
                 /// Custom Text Fields
                 CustomTF(sfIcon: "at", hint: "Email Id", value: $emailId)
+                    .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(emailIdIsValid ? Color.green : Color.red)
+                    .onChange(of: emailId) { newValue in
+                        if(newValue.range(of:"^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$", options: .regularExpression) != nil) {
+                            self.emailIdIsValid = true
+                            print("valid")
+                        } else {
+                            self.emailIdIsValid = false
+                            print("invalid")
+                        }
+                    }
                 
                 CustomTF(sfIcon: "person", hint: "Full Name", value: $fullName)
                     .padding(.top, 5)
@@ -63,7 +76,7 @@ struct SignUp: View {
                 }
                 .hSpacing(.trailing)
                 /// Disabling Until the Data is Entered
-                .disableWithOpacity(emailId.isEmpty || password.isEmpty || fullName.isEmpty || ConfirmPassword.isEmpty || password != ConfirmPassword)
+                .disableWithOpacity(emailId.isEmpty || password.isEmpty || fullName.isEmpty || ConfirmPassword.isEmpty || password != ConfirmPassword || !emailIdIsValid)
             }
             .padding(.top, 20)
             
