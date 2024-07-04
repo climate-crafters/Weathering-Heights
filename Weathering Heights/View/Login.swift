@@ -12,6 +12,8 @@ struct Login: View {
     
     @State private var emailId: String = ""
     @State private var password: String = ""
+    @State private var showForgetPasswordView: Bool = false
+    @State private var showResetView: Bool = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 15, content: {
@@ -34,7 +36,7 @@ struct Login: View {
                     .padding(.top, 5)
                 
                 Button("Forgot Password?") {
-                    
+                    showForgetPasswordView.toggle()
                 }
                 .font(.callout)
                 .fontWeight(.heavy)
@@ -69,6 +71,16 @@ struct Login: View {
         .padding(.vertical, 15)
         .padding(.horizontal, 25)
         .toolbar(.hidden, for: .navigationBar)
+        .sheet(isPresented: $showForgetPasswordView, content: {
+            if #available(iOS 16.4, *) {
+                ForgotPassword(showResetView: $showResetView)
+                    .presentationDetents([.height(300)])
+                    .presentationCornerRadius(30)
+            } else {
+                ForgotPassword(showResetView: $showResetView)
+                    .presentationDetents([.height(300)])
+            }
+        })
     }
 }
 

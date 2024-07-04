@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38C070D82C37021700891AD2 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C070D72C37021700891AD2 /* ForgotPassword.swift */; };
 		38E657162C344188004B5F0D /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E657142C344188004B5F0D /* View+Extensions.swift */; };
 		38E6571C2C344194004B5F0D /* CustomTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E657172C344194004B5F0D /* CustomTF.swift */; };
 		38E6571D2C344194004B5F0D /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E657182C344194004B5F0D /* GradientButton.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38C070D72C37021700891AD2 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		38E657142C344188004B5F0D /* View+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		38E657172C344194004B5F0D /* CustomTF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTF.swift; sourceTree = "<group>"; };
 		38E657182C344194004B5F0D /* GradientButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				38E657182C344194004B5F0D /* GradientButton.swift */,
 				38E657192C344194004B5F0D /* Login.swift */,
 				38E6571A2C344194004B5F0D /* Signup.swift */,
+				38C070D72C37021700891AD2 /* ForgotPassword.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				38E6571E2C344194004B5F0D /* Login.swift in Sources */,
 				38E6571C2C344194004B5F0D /* CustomTF.swift in Sources */,
 				5EC50A422C306620006C137C /* Weathering_HeightsApp.swift in Sources */,
+				38C070D82C37021700891AD2 /* ForgotPassword.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
