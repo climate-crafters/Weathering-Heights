@@ -87,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				38E657142C344188004B5F0D /* View+Extensions.swift */,
-				38E6571B2C344194004B5F0D /* View */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -129,6 +128,7 @@
 				5EC50A412C306620006C137C /* Weathering_HeightsApp.swift */,
 				5EC50A432C306620006C137C /* ContentView.swift */,
 				38E657202C34419D004B5F0D /* Login_SignUp.swift */,
+				38E6571B2C344194004B5F0D /* View */,
 				38E657152C344188004B5F0D /* Helpers */,
 				5EC50A452C306621006C137C /* Assets.xcassets */,
 				5EC50A472C306621006C137C /* Preview Content */,
