@@ -31,7 +31,7 @@ struct ForgotPassword: View {
             Text("Forgot Password?")
                 .font(.largeTitle)
                 .fontWeight(.heavy)
-                .padding(.top, 25)
+                .padding(.top, 5)
             
             Text("Please enter your Email ID so that we can send the reset link.")
                 .font(.caption)
@@ -54,7 +54,12 @@ struct ForgotPassword: View {
                 
                 /// SignUp Button
                 GradientButton(title: "Send Link", icon: "arrow.right") {
-                    dismiss()
+                    ///Code after link sent
+                    Task {
+                        dismiss()
+                        try? await Task.sleep(for: .seconds(0))
+                        showResetView = true
+                    }
                 }
                 .hSpacing(.trailing)
                 /// Disabling Until the Data is Entered

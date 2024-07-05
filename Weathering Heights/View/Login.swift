@@ -71,6 +71,7 @@ struct Login: View {
         .padding(.vertical, 15)
         .padding(.horizontal, 25)
         .toolbar(.hidden, for: .navigationBar)
+        
         .sheet(isPresented: $showForgetPasswordView, content: {
             if #available(iOS 16.4, *) {
                 ForgotPassword(showResetView: $showResetView)
@@ -79,6 +80,16 @@ struct Login: View {
             } else {
                 ForgotPassword(showResetView: $showResetView)
                     .presentationDetents([.height(300)])
+            }
+        })
+        .sheet(isPresented: $showResetView, content: {
+            if #available(iOS 16.4, *) {
+                PasswordResetView()
+                    .presentationDetents([.height(350)])
+                    .presentationCornerRadius(30)
+            } else {
+                PasswordResetView()
+                    .presentationDetents([.height(350)])
             }
         })
     }
