@@ -16,6 +16,9 @@ struct SignUp: View {
     @State private var ConfirmPassword: String = ""
     
     @State var emailIdIsValid: Bool = true
+    
+    @State private var askOTP: Bool = false
+    @State private var otpText: String = ""
    
     var body: some View {
         VStack(alignment: .leading, spacing: 15, content: {
@@ -72,7 +75,7 @@ struct SignUp: View {
                 
                 /// SignUp Button
                 GradientButton(title: "Continue", icon: "arrow.right") {
-                    
+                    askOTP.toggle()
                 }
                 .hSpacing(.trailing)
                 /// Disabling Until the Data is Entered
@@ -98,6 +101,16 @@ struct SignUp: View {
         .padding(.vertical, 15)
         .padding(.horizontal, 25)
         .toolbar(.hidden, for: .navigationBar)
+        .sheet(isPresented: $askOTP, content: {
+            if #available(iOS 16.4, *) {
+                OTPView(otpText: $otpText)
+                    .presentationDetents([.height(350)])
+                    .presentationCornerRadius(30)
+            } else {
+                OTPView(otpText: $otpText)
+                    .presentationDetents([.height(350)])
+            }
+        })
     }
 }
 

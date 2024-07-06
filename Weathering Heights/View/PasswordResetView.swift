@@ -15,6 +15,9 @@ struct PasswordResetView: View {
     @State var emailIdIsValid: Bool = true
     
     @Environment(\.dismiss) private var dismiss
+    
+    @State private var askOTP: Bool = false
+    @State private var otpText: String = ""
    
     var body: some View {
         VStack(alignment: .leading, spacing: 15, content: {
@@ -35,19 +38,27 @@ struct PasswordResetView: View {
             
             VStack(spacing: 25) {
                 /// Custom Text Fields
-                CustomTF(sfIcon: "at", hint: "Password", value: $password)
+                CustomTF(sfIcon: "lock", hint: "Password",isPassword: true, value: $password)
                     .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                CustomTF(sfIcon: "at", hint: "Confirm Password", value: $confirmPassword)
+                CustomTF(sfIcon: "lock", hint: "Confirm Password",isPassword: true, value: $confirmPassword)
                     .padding(.top, 5)
                 
+                if !password.isEmpty && !ConfirmPassword.isEmpty && password != ConfirmPassword {
+                    Text("Password Doesnt Match")
+                        .foregroundStyle(.red)
+                        .font(.callout)
+                }
+                
                 /// SignUp Button
-                GradientButton(title: "Send Link", icon: "arrow.right") {
+                GradientButton(title: "Send OTP", icon: "arrow.right") {
                     ///Code after link sent
                     /// Reset Password
+                    askOTP.toggle()
                 }
                 .hSpacing(.trailing)
                 /// Disabling Until the Data is Entered
                 .disableWithOpacity(password.isEmpty || confirmPassword.isEmpty || password != confirmPassword)
+                
             }
             .padding(.top, 20)
         })
@@ -55,6 +66,16 @@ struct PasswordResetView: View {
         .padding(.horizontal, 25)
         
         .interactiveDismissDisabled()
+        .sheet(isPresented: $askOTP, content: {
+            if #available(iOS 16.4, *) {
+                OTPView(otpText: $otpText)
+                    .presentationDetents([.height(350)])
+                    .presentationCornerRadius(30)
+            } else {
+                OTPView(otpText: $otpText)
+                    .presentationDetents([.height(350)])
+            }
+        })
     }
 }
 

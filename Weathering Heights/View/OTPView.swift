@@ -37,9 +37,9 @@ struct OTPView: View {
             
             VStack(spacing: 25) {
                 /// Custom OTP TextField
-                
+                OTPVerificationView(otpText: $otpText)
                 /// SignUp Button
-                GradientButton(title: "Send Link", icon: "arrow.right") {
+                GradientButton(title: "Verify OTP", icon: "arrow.right") {
                     ///Code after link sent
                 }
                 .hSpacing(.trailing)

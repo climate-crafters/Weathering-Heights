@@ -53,7 +53,7 @@ struct ForgotPassword: View {
                     }
                 
                 /// SignUp Button
-                GradientButton(title: "Send Link", icon: "arrow.right") {
+                GradientButton(title: "Reset Password", icon: "arrow.right") {
                     ///Code after link sent
                     Task {
                         dismiss()
