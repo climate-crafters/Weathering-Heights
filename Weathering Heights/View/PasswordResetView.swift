@@ -43,7 +43,7 @@ struct PasswordResetView: View {
                 CustomTF(sfIcon: "lock", hint: "Confirm Password",isPassword: true, value: $confirmPassword)
                     .padding(.top, 5)
                 
-                if !password.isEmpty && !ConfirmPassword.isEmpty && password != ConfirmPassword {
+                if !password.isEmpty && !confirmPassword.isEmpty && password != confirmPassword {
                     Text("Password Doesnt Match")
                         .foregroundStyle(.red)
                         .font(.callout)
