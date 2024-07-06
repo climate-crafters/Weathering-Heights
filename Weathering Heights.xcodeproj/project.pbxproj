@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		381173FA2C39618700DDBFF1 /* OTPView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381173F92C39618700DDBFF1 /* OTPView2.swift */; };
 		38C070D82C37021700891AD2 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C070D72C37021700891AD2 /* ForgotPassword.swift */; };
 		38D46B8B2C38189500D482E5 /* PasswordResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D46B8A2C38189500D482E5 /* PasswordResetView.swift */; };
 		38D46B8D2C3833F400D482E5 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D46B8C2C3833F400D482E5 /* OTPView.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		381173F92C39618700DDBFF1 /* OTPView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPView2.swift; sourceTree = "<group>"; };
 		38C070D72C37021700891AD2 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		38D46B8A2C38189500D482E5 /* PasswordResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetView.swift; sourceTree = "<group>"; };
 		38D46B8C2C3833F400D482E5 /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				38E6571A2C344194004B5F0D /* Signup.swift */,
 				38C070D72C37021700891AD2 /* ForgotPassword.swift */,
 				38D46B8C2C3833F400D482E5 /* OTPView.swift */,
+				381173F92C39618700DDBFF1 /* OTPView2.swift */,
 				38D46B8E2C3870B800D482E5 /* OTPVerificationView.swift */,
 				38D46B8A2C38189500D482E5 /* PasswordResetView.swift */,
 			);
@@ -303,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				381173FA2C39618700DDBFF1 /* OTPView2.swift in Sources */,
 				38D46B8D2C3833F400D482E5 /* OTPView.swift in Sources */,
 				38E6571F2C344194004B5F0D /* Signup.swift in Sources */,
 				38D46B8B2C38189500D482E5 /* PasswordResetView.swift in Sources */,

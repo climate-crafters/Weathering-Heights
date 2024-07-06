@@ -15,6 +15,9 @@ struct ForgotPassword: View {
     @State var emailIdIsValid: Bool = true
     
     @Environment(\.dismiss) private var dismiss
+    
+    @State private var askOTP: Bool = false
+    @State private var otpText: String = ""
    
     var body: some View {
         VStack(alignment: .leading, spacing: 15, content: {
@@ -53,13 +56,9 @@ struct ForgotPassword: View {
                     }
                 
                 /// SignUp Button
-                GradientButton(title: "Reset Password", icon: "arrow.right") {
+                GradientButton(title: "Send OTP", icon: "arrow.right") {
                     ///Code after link sent
-                    Task {
-                        dismiss()
-                        try? await Task.sleep(for: .seconds(0))
-                        showResetView = true
-                    }
+                    askOTP.toggle()
                 }
                 .hSpacing(.trailing)
                 /// Disabling Until the Data is Entered
@@ -71,6 +70,16 @@ struct ForgotPassword: View {
         .padding(.horizontal, 25)
         
         .interactiveDismissDisabled()
+        .sheet(isPresented: $askOTP, content: {
+            if #available(iOS 16.4, *) {
+                OTPView2(otpText: $otpText)
+                    .presentationDetents([.height(350)])
+                    .presentationCornerRadius(30)
+            } else {
+                OTPView2(otpText: $otpText)
+                    .presentationDetents([.height(350)])
+            }
+        })
     }
 }
 
