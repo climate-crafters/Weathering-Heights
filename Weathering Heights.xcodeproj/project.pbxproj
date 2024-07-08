@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3805A0A02C3BCC5100A56BBF /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3805A09F2C3BCC5100A56BBF /* Profile.swift */; };
 		381173FA2C39618700DDBFF1 /* OTPView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381173F92C39618700DDBFF1 /* OTPView2.swift */; };
 		38C070D82C37021700891AD2 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C070D72C37021700891AD2 /* ForgotPassword.swift */; };
 		38D46B8B2C38189500D482E5 /* PasswordResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D46B8A2C38189500D482E5 /* PasswordResetView.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3805A09F2C3BCC5100A56BBF /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		381173F92C39618700DDBFF1 /* OTPView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPView2.swift; sourceTree = "<group>"; };
 		38C070D72C37021700891AD2 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		38D46B8A2C38189500D482E5 /* PasswordResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetView.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			children = (
 				5EC50A412C306620006C137C /* Weathering_HeightsApp.swift */,
 				5EC50A432C306620006C137C /* ContentView.swift */,
+				3805A09F2C3BCC5100A56BBF /* Profile.swift */,
 				38E657202C34419D004B5F0D /* Login_SignUp.swift */,
 				38E6571B2C344194004B5F0D /* View */,
 				38E657152C344188004B5F0D /* Helpers */,
@@ -306,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3805A0A02C3BCC5100A56BBF /* Profile.swift in Sources */,
 				381173FA2C39618700DDBFF1 /* OTPView2.swift in Sources */,
 				38D46B8D2C3833F400D482E5 /* OTPView.swift in Sources */,
 				38E6571F2C344194004B5F0D /* Signup.swift in Sources */,
