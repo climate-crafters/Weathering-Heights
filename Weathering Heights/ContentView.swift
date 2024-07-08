@@ -22,7 +22,7 @@ struct ContentView: View {
 
                 VStack {
                     Text("Welcome to\nWeather-ing Heights")
-                        .font(.largeTitle)
+                        .font(.custom("rubik", size: 32))
                         .bold()
                         .foregroundStyle(.white)
                         .padding(.top, 275.0)
