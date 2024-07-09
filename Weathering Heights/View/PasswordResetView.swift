@@ -17,51 +17,57 @@ struct PasswordResetView: View {
     @Environment(\.dismiss) private var dismiss
    
     var body: some View {
-        VStack(alignment: .leading, spacing: 15, content: {
-            /// Back Button
-            Button(action: {
-                dismiss()
-            }, label: {
-                Image(systemName: "xmark")
-                    .font(.title2)
-                    .foregroundStyle(.gray)
-            })
-            .padding(.top, 10)
+        ZStack {
+            Image("Background2")
+                .resizable()
+                .ignoresSafeArea()
             
-            Text("Reset Password")
-                .font(.largeTitle)
-                .fontWeight(.heavy)
-                .padding(.top, 5)
-            
-            VStack(spacing: 25) {
-                /// Custom Text Fields
-                CustomTF(sfIcon: "lock", hint: "Password",isPassword: true, value: $password)
-                    .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                CustomTF(sfIcon: "lock", hint: "Confirm Password",isPassword: true, value: $confirmPassword)
+            VStack(alignment: .leading, spacing: 15, content: {
+                /// Back Button
+                Button(action: {
+                    dismiss()
+                }, label: {
+                    Image(systemName: "xmark")
+                        .font(.title2)
+                        .foregroundStyle(.gray)
+                })
+                .padding(.top, 10)
+                
+                Text("Reset Password")
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
                     .padding(.top, 5)
                 
-                if !password.isEmpty && !confirmPassword.isEmpty && password != confirmPassword {
-                    Text("Password Doesnt Match")
-                        .foregroundStyle(.red)
-                        .font(.callout)
+                VStack(spacing: 25) {
+                    /// Custom Text Fields
+                    CustomTF(sfIcon: "lock", hint: "Password",isPassword: true, value: $password)
+                        .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                    CustomTF(sfIcon: "lock", hint: "Confirm Password",isPassword: true, value: $confirmPassword)
+                        .padding(.top, 5)
+                    
+                    if !password.isEmpty && !confirmPassword.isEmpty && password != confirmPassword {
+                        Text("Password Doesnt Match")
+                            .foregroundStyle(.red)
+                            .font(.callout)
+                    }
+                    
+                    /// SignUp Button
+                    GradientButton(title: "Reset Password", icon: "arrow.right") {
+                        ///Code after link sent
+                        /// Reset Password
+                    }
+                    .hSpacing(.trailing)
+                    /// Disabling Until the Data is Entered
+                    .disableWithOpacity(password.isEmpty || confirmPassword.isEmpty || password != confirmPassword)
+                    
                 }
-                
-                /// SignUp Button
-                GradientButton(title: "Reset Password", icon: "arrow.right") {
-                    ///Code after link sent
-                    /// Reset Password
-                }
-                .hSpacing(.trailing)
-                /// Disabling Until the Data is Entered
-                .disableWithOpacity(password.isEmpty || confirmPassword.isEmpty || password != confirmPassword)
-                
-            }
-            .padding(.top, 20)
-        })
-        .padding(.vertical, 15)
-        .padding(.horizontal, 25)
-        
-        .interactiveDismissDisabled()
+                .padding(.top, 20)
+            })
+            .padding(.vertical, 15)
+            .padding(.horizontal, 25)
+            
+            .interactiveDismissDisabled()
+        }
     }
 }
 

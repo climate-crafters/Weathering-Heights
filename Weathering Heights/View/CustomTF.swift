@@ -29,12 +29,15 @@ struct CustomTF: View {
                         /// Revealing Password when users wants to show Password
                         if showPassword {
                             TextField(hint, text: $value)
+                                .font(.custom("Rubik-Light", fixedSize: 17.5))
                         } else {
                             SecureField(hint, text: $value)
+                                .font(.custom("Rubik-Light", fixedSize: 17.5))
                         }
                     }
                 } else {
                     TextField(hint, text: $value)
+                        .font(.custom("Rubik-Light", fixedSize: 17.5))
                 }
                 
                 Divider()

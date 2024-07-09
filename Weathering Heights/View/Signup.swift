@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignUp: View {
-    @Binding var showSignup: Bool
+    @Binding var showLogin: Bool
     
     @State private var emailId: String = ""
     @State private var fullName: String = ""
@@ -21,27 +21,20 @@ struct SignUp: View {
     @State private var otpText: String = ""
    
     var body: some View {
+        Text("Tell us more about yourself")
+            .font(.largeTitle)
+            .fontWeight(.heavy)
+            .padding(.top, 25)
+            .multilineTextAlignment(.center)
+            .padding(.top, 35)
+        
         VStack(alignment: .leading, spacing: 15, content: {
-            /// Back Button
-            Button(action: {
-                showSignup = false
-            }, label: {
-                Image(systemName: "arrow.left")
-                    .font(.title2)
-                    .foregroundStyle(.gray)
-            })
-            .padding(.top, 10)
-            
-            Text("SignUp")
-                .font(.largeTitle)
-                .fontWeight(.heavy)
-                .padding(.top, 25)
             
             Text("Please sign up to continue")
                 .font(.callout)
                 .foregroundStyle(.gray)
                 .fontWeight(.semibold)
-                .padding(.top, -5)
+                .padding(.top, 60)
             
             VStack(spacing: 25) {
                 /// Custom Text Fields
@@ -51,10 +44,8 @@ struct SignUp: View {
                     .onChange(of: emailId) { newValue in
                         if(newValue.range(of:"^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$", options: .regularExpression) != nil) {
                             self.emailIdIsValid = true
-                            print("valid")
                         } else {
                             self.emailIdIsValid = false
-                            print("invalid")
                         }
                     }
                 
@@ -90,7 +81,7 @@ struct SignUp: View {
                     .foregroundStyle(.gray)
                 
                 Button("Login") {
-                    showSignup = false
+                    showLogin.toggle()
                 }
                 .fontWeight(.bold)
                 .tint(Color(UIColor(red: 7/255, green: 71/255, blue: 37/255, alpha: 1)))
