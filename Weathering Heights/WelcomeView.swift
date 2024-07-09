@@ -35,7 +35,7 @@ struct WelcomeView: View {
                         .foregroundStyle(.white)
                         .padding(.vertical)
 
-                    NavigationLink(destination: LoginView()) {
+                    NavigationLink(destination: SignUpView()) {
                         Text("Next")
                             .font(.custom("rubik-medium", size: 18))
                     }
