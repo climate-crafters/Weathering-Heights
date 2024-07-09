@@ -12,14 +12,14 @@ extension View {
     @ViewBuilder
     func hSpacing(_ alignment: Alignment = .center) -> some View {
         self
-            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: alignment)
+            .frame(maxWidth: /*@START_MENU_TOKEN@*/ .infinity/*@END_MENU_TOKEN@*/, alignment: alignment)
     }
-    
+
     func VSpacing(_ alignment: Alignment = .center) -> some View {
         self
-            .frame(maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: alignment)
+            .frame(maxHeight: /*@START_MENU_TOKEN@*/ .infinity/*@END_MENU_TOKEN@*/, alignment: alignment)
     }
-    
+
     /// Disable with opacity
     @ViewBuilder
     func disableWithOpacity(_ condition: Bool) -> some View {
