@@ -87,5 +87,5 @@ struct Login: View {
 }
 
 #Preview {
-    Login_SignUp()
+    LoginView()
 }

@@ -116,5 +116,5 @@ struct SignUp: View {
 
 
 #Preview {
-    Login_SignUp()
+    LoginView()
 }

@@ -85,5 +85,5 @@ struct ForgotPassword: View {
 
 
 #Preview {
-    Login_SignUp()
+    LoginView()
 }

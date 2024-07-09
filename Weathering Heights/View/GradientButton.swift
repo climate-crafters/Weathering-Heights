@@ -28,5 +28,5 @@ struct GradientButton: View {
 }
 
 #Preview {
-    Login_SignUp()
+    LoginView()
 }

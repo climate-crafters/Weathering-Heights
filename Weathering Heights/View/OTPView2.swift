@@ -69,5 +69,5 @@ struct OTPView2: View {
 }
 
 #Preview {
-    Login_SignUp()
+    LoginView()
 }

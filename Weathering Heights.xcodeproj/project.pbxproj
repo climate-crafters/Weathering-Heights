@@ -18,7 +18,7 @@
 		38E6571D2C344194004B5F0D /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E657182C344194004B5F0D /* GradientButton.swift */; };
 		38E6571E2C344194004B5F0D /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E657192C344194004B5F0D /* Login.swift */; };
 		38E6571F2C344194004B5F0D /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E6571A2C344194004B5F0D /* Signup.swift */; };
-		38E657212C34419D004B5F0D /* Login_SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E657202C34419D004B5F0D /* Login_SignUp.swift */; };
+		38E657212C34419D004B5F0D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E657202C34419D004B5F0D /* LoginView.swift */; };
 		5E2662832C3C728400E9A389 /* Rubik-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E2662752C3C728400E9A389 /* Rubik-ExtraBold.ttf */; };
 		5E2662842C3C728400E9A389 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E2662762C3C728400E9A389 /* Rubik-Italic.ttf */; };
 		5E2662852C3C728400E9A389 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E2662772C3C728400E9A389 /* Rubik-Regular.ttf */; };
@@ -71,7 +71,7 @@
 		38E657182C344194004B5F0D /* GradientButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		38E657192C344194004B5F0D /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		38E6571A2C344194004B5F0D /* Signup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
-		38E657202C34419D004B5F0D /* Login_SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login_SignUp.swift; sourceTree = "<group>"; };
+		38E657202C34419D004B5F0D /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5E2662742C3C704C00E9A389 /* Weathering-Heights-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Weathering-Heights-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5E2662752C3C728400E9A389 /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBold.ttf"; sourceTree = "<group>"; };
 		5E2662762C3C728400E9A389 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 				5EC50A412C306620006C137C /* Weathering_HeightsApp.swift */,
 				5EC50A432C306620006C137C /* WelcomeView.swift */,
 				3805A09F2C3BCC5100A56BBF /* Profile.swift */,
-				38E657202C34419D004B5F0D /* Login_SignUp.swift */,
+				38E657202C34419D004B5F0D /* LoginView.swift */,
 				38E6571B2C344194004B5F0D /* View */,
 				38E657152C344188004B5F0D /* Helpers */,
 				5EC50A452C306621006C137C /* Assets.xcassets */,
@@ -382,7 +382,7 @@
 				38D46B8B2C38189500D482E5 /* PasswordResetView.swift in Sources */,
 				38E6571D2C344194004B5F0D /* GradientButton.swift in Sources */,
 				5EC50A442C306620006C137C /* WelcomeView.swift in Sources */,
-				38E657212C34419D004B5F0D /* Login_SignUp.swift in Sources */,
+				38E657212C34419D004B5F0D /* LoginView.swift in Sources */,
 				38E657162C344188004B5F0D /* View+Extensions.swift in Sources */,
 				38E6571E2C344194004B5F0D /* Login.swift in Sources */,
 				38E6571C2C344194004B5F0D /* CustomTF.swift in Sources */,

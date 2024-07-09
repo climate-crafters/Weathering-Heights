@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Login_SignUp: View {
+struct LoginView: View {
     /// View Properties
     @State private var showSignup: Bool = false
     var body: some View {
@@ -40,5 +40,5 @@ struct Login_SignUp: View {
 }
 
 #Preview {
-    Login_SignUp()
+    LoginView()
 }
