@@ -34,14 +34,13 @@ struct Login: View {
                 
                 Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
                 Text("Login")
+                    .font(.custom("Rubik-Bold", size: 40))
                     .foregroundStyle(.white)
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
+                    
                 
                 Text("Please sign in to continue")
-                    .font(.callout)
+                    .font(.custom("Rubik-Regular", size: 18))
                     .foregroundStyle(.white)
-                    .fontWeight(.semibold)
                     .padding(.top, -5)
                 
                 VStack(spacing: 25) {
@@ -58,7 +57,6 @@ struct Login: View {
                         }
                     
                     CustomTF(sfIcon: "lock", hint: "Password",isPassword: true, value: $password)
-                        .foregroundStyle(.white)
                         .padding(.top, 5)
                     
                     Button("Forgot Password?") {

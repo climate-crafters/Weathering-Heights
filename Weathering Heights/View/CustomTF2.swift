@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CustomTF2: View {
     var sfIcon: String
-    var iconTint: Color = .gray
+    var iconTint: Color = .black
     var hint: String
     /// Hides TextField
     var isPassword: Bool = false

@@ -22,8 +22,7 @@ struct SignUp: View {
    
     var body: some View {
         Text("Tell us more about yourself")
-            .font(.largeTitle)
-            .fontWeight(.heavy)
+            .font(.custom("Rubik-Bold", size: 40))
             .padding(.top, 25)
             .multilineTextAlignment(.center)
             .padding(.top, 35)
@@ -33,9 +32,8 @@ struct SignUp: View {
             
             Text("Please sign up to continue")
                 .foregroundColor(.white)
-                .font(.callout)
+                .font(.custom("Rubik-SemiBold", size: 18))
                 .foregroundStyle(.gray)
-                .fontWeight(.semibold)
                 .padding(.top, 60)
             
             
@@ -53,15 +51,12 @@ struct SignUp: View {
                     }
                 
                 CustomTF(sfIcon: "person", hint: "Full Name", value: $fullName)
-                    .foregroundStyle(.white)
                     .padding(.top, 5)
                 
                 CustomTF(sfIcon: "lock", hint: "Password",isPassword: true, value: $password)
-                    .foregroundStyle(.white)
                     .padding(.top, 5)
                 
                 CustomTF(sfIcon: "lock", hint: "Confirm Password",isPassword: true, value: $ConfirmPassword)
-                    .foregroundStyle(.white)
                     .padding(.top, 5)
                 
                 if !password.isEmpty && !ConfirmPassword.isEmpty && password != ConfirmPassword {
@@ -85,6 +80,7 @@ struct SignUp: View {
             
             HStack(spacing: 6) {
                 Text("Already have an Account?")
+                    .font(.custom("Rubik-Regular", size: 18))
                     .foregroundColor(.white)
                     .foregroundStyle(.gray)
                 
