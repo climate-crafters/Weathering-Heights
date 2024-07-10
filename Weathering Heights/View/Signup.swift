@@ -37,7 +37,7 @@ struct SignUp: View {
                 .padding(.top, 60)
             
             
-            VStack(spacing: 25) {
+            VStack(spacing: 20) {
                 /// Custom Text Fields
                 CustomTF(sfIcon: "at", hint: "Email Id", value: $emailId)
                     .autocapitalization(.none)

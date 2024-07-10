@@ -26,24 +26,23 @@ struct CustomTF: View {
                     Image(systemName: sfIcon)
                         .foregroundStyle(iconTint)
                         .frame(width: 30)
-                        .offset(y: 2)
-                        
+                        .offset(x: 5, y: 2)                        
                     VStack(alignment: .leading,spacing: 8, content: {
                         if isPassword {
                             Group {
                                 /// Revealing Password when users wants to show Password
                                 if showPassword {
                                     TextField(hint, text: $value)
-                                        .font(.custom("Rubik-Light", fixedSize: 17.5))
+                                        .font(.custom("Rubik-Regular", fixedSize: 17.5))
                                 } else {
                                     SecureField(hint, text: $value)
-                                        .font(.custom("Rubik-Light", fixedSize: 17.5))
+                                        .font(.custom("Rubik-Regular", fixedSize: 17.5))
                                         
                                 }
                             }
                         } else {
                             TextField("", text: $value, prompt: Text(hint).foregroundColor(.gray))
-                                .font(.custom("Rubik-Light", fixedSize: 17.5))
+                                .font(.custom("Rubik-Regular", fixedSize: 17.5))
                         }
                         
                     })
