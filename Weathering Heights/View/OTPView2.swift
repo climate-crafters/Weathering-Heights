@@ -46,7 +46,7 @@ struct OTPView2: View {
                     /// Custom OTP TextField
                     OTPVerificationView(otpText: $otpText)
                     /// SignUp Button
-                    GradientButton(title: "Verify OTP", icon: "arrow.right") {
+                    GradientButton2(title: "Verify OTP", icon: "arrow.right") {
                         ///Code after link sent
                         showResetView.toggle()
                     }

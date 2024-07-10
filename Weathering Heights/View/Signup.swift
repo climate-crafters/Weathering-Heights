@@ -27,19 +27,22 @@ struct SignUp: View {
             .padding(.top, 25)
             .multilineTextAlignment(.center)
             .padding(.top, 35)
+            .foregroundColor(.white)
         
         VStack(alignment: .leading, spacing: 15, content: {
             
             Text("Please sign up to continue")
+                .foregroundColor(.white)
                 .font(.callout)
                 .foregroundStyle(.gray)
                 .fontWeight(.semibold)
                 .padding(.top, 60)
             
+            
             VStack(spacing: 25) {
                 /// Custom Text Fields
                 CustomTF(sfIcon: "at", hint: "Email Id", value: $emailId)
-                    .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                    .autocapitalization(.none)
                     .foregroundColor(emailIdIsValid ? Color.green : Color.red)
                     .onChange(of: emailId) { newValue in
                         if(newValue.range(of:"^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$", options: .regularExpression) != nil) {
@@ -50,12 +53,15 @@ struct SignUp: View {
                     }
                 
                 CustomTF(sfIcon: "person", hint: "Full Name", value: $fullName)
+                    .foregroundStyle(.white)
                     .padding(.top, 5)
                 
                 CustomTF(sfIcon: "lock", hint: "Password",isPassword: true, value: $password)
+                    .foregroundStyle(.white)
                     .padding(.top, 5)
                 
                 CustomTF(sfIcon: "lock", hint: "Confirm Password",isPassword: true, value: $ConfirmPassword)
+                    .foregroundStyle(.white)
                     .padding(.top, 5)
                 
                 if !password.isEmpty && !ConfirmPassword.isEmpty && password != ConfirmPassword {
@@ -68,6 +74,7 @@ struct SignUp: View {
                 GradientButton(title: "Continue", icon: "arrow.right") {
                     askOTP.toggle()
                 }
+                .foregroundColor(.white)
                 .hSpacing(.trailing)
                 /// Disabling Until the Data is Entered
                 .disableWithOpacity(emailId.isEmpty || password.isEmpty || fullName.isEmpty || ConfirmPassword.isEmpty || password != ConfirmPassword || !emailIdIsValid)
@@ -78,13 +85,14 @@ struct SignUp: View {
             
             HStack(spacing: 6) {
                 Text("Already have an Account?")
+                    .foregroundColor(.white)
                     .foregroundStyle(.gray)
                 
                 Button("Login") {
                     showLogin.toggle()
                 }
                 .fontWeight(.bold)
-                .tint(Color(UIColor(red: 7/255, green: 71/255, blue: 37/255, alpha: 1)))
+                .tint(.teal)
             }
             .font(.callout)
             .hSpacing()

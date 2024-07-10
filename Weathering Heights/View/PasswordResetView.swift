@@ -40,9 +40,9 @@ struct PasswordResetView: View {
                 
                 VStack(spacing: 25) {
                     /// Custom Text Fields
-                    CustomTF(sfIcon: "lock", hint: "Password",isPassword: true, value: $password)
+                    CustomTF2(sfIcon: "lock", hint: "Password",isPassword: true, value: $password)
                         .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                    CustomTF(sfIcon: "lock", hint: "Confirm Password",isPassword: true, value: $confirmPassword)
+                    CustomTF2(sfIcon: "lock", hint: "Confirm Password",isPassword: true, value: $confirmPassword)
                         .padding(.top, 5)
                     
                     if !password.isEmpty && !confirmPassword.isEmpty && password != confirmPassword {
@@ -52,7 +52,7 @@ struct PasswordResetView: View {
                     }
                     
                     /// SignUp Button
-                    GradientButton(title: "Reset Password", icon: "arrow.right") {
+                    GradientButton2(title: "Reset Password", icon: "arrow.right") {
                         ///Code after link sent
                         /// Reset Password
                     }

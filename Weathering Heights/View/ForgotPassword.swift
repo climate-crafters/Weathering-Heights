@@ -49,7 +49,7 @@ struct ForgotPassword: View {
                 
                 VStack(spacing: 25) {
                     /// Custom Text Fields
-                    CustomTF(sfIcon: "at", hint: "Email Id", value: $emailId)
+                    CustomTF2(sfIcon: "at", hint: "Email Id", value: $emailId)
                         .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                         .foregroundColor(emailIdIsValid ? Color.green : Color.red)
                         .onChange(of: emailId) { newValue in
@@ -61,7 +61,7 @@ struct ForgotPassword: View {
                         }
                     
                     /// SignUp Button
-                    GradientButton(title: "Send OTP", icon: "arrow.right") {
+                    GradientButton2(title: "Send OTP", icon: "arrow.right") {
                         ///Code after link sent
                         askOTP.toggle()
                     }

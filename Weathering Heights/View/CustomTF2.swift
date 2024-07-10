@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct CustomTF: View {
+struct CustomTF2: View {
     var sfIcon: String
-    var iconTint: Color = .white
+    var iconTint: Color = .gray
     var hint: String
     /// Hides TextField
     var isPassword: Bool = false
@@ -19,8 +19,7 @@ struct CustomTF: View {
     var body: some View {
         HStack(alignment: .top, spacing: 8, content: {
             Image(systemName: sfIcon)
-                .foregroundColor(.white)
-                .foregroundStyle(.white)
+                .foregroundStyle(iconTint)
                 .frame(width: 30)
                 .offset(y: 2)
             
@@ -29,19 +28,17 @@ struct CustomTF: View {
                     Group {
                         /// Revealing Password when users wants to show Password
                         if showPassword {
-                            TextField("", text: $value, prompt: Text(hint).foregroundColor(.gray))
+                            TextField(hint, text: $value)
                                 .font(.custom("Rubik-Light", fixedSize: 17.5))
                         } else {
-                            SecureField("", text: $value, prompt: Text(hint).foregroundColor(.gray))
+                            SecureField(hint, text: $value)
                                 .font(.custom("Rubik-Light", fixedSize: 17.5))
-
                         }
                     }
                 } else {
-                    TextField("", text: $value, prompt: Text(hint).foregroundColor(.gray))
+                    TextField(hint, text: $value)
                         .font(.custom("Rubik-Light", fixedSize: 17.5))
                 }
-                
                 
                 Divider()
             })
@@ -54,7 +51,7 @@ struct CustomTF: View {
                         }
                     }, label: {
                         Image(systemName: showPassword ? "eye.slash" : "eye")
-                            .foregroundStyle(.white)
+                            .foregroundStyle(.gray)
                             .padding(10)
                             .contentShape(.capsule)
                     })

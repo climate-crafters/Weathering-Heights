@@ -14,7 +14,7 @@ struct LoginView: View {
         
         NavigationStack {
             ZStack {
-                Image("Background2")
+                Image("Background")
                     .resizable()
                     .ignoresSafeArea()
                 VStack {

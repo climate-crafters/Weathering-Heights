@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GradientButton: View {
+struct GradientButton2: View {
     var title: String
     var icon: String
     var onClick: () -> ()
@@ -16,15 +16,13 @@ struct GradientButton: View {
         Button(action: onClick, label: {
             HStack(spacing: 15) {
                 Text(title)
-                    .foregroundColor(.black)
                 Image(systemName: icon)
             }
-            .fontWeight(.heavy)
-            .foregroundStyle(.black)
+            .fontWeight(.bold)
+            .foregroundStyle(.white)
             .padding(.vertical, 12)
             .padding(.horizontal, 35)
-            .background(.white
-                        , in: .capsule)
+            .background(.linearGradient(colors: [Color(UIColor(red: 7/255, green: 71/255, blue: 37/255, alpha: 1)), Color(UIColor(red: 6/255, green: 60/255, blue: 29/255, alpha: 1)), Color(UIColor(red: 6/255, green: 48/255, blue: 24/255, alpha: 1))], startPoint: .top, endPoint: .bottom), in: .capsule)
         })
     }
 }

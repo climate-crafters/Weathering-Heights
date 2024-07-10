@@ -15,9 +15,11 @@ struct Login: View {
     @State private var showForgetPasswordView: Bool = false
     @State private var showResetView: Bool = false
     
+    @State var emailIdIsValid: Bool = true
+    
     var body: some View {
         ZStack {
-            Image("Background2")
+            Image("Background")
                 .resizable()
                 .ignoresSafeArea()
             VStack(alignment: .leading, spacing: 15, content: {
@@ -32,25 +34,37 @@ struct Login: View {
                 
                 Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
                 Text("Login")
+                    .foregroundStyle(.white)
                     .font(.largeTitle)
                     .fontWeight(.heavy)
                 
                 Text("Please sign in to continue")
                     .font(.callout)
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.white)
                     .fontWeight(.semibold)
                     .padding(.top, -5)
                 
                 VStack(spacing: 25) {
                     /// Custom Text Fields
                     CustomTF(sfIcon: "at", hint: "Email Id", value: $emailId)
+                        .autocapitalization(.none)
+                        .foregroundColor(emailIdIsValid ? Color.green : Color.red)
+                        .onChange(of: emailId) { newValue in
+                            if(newValue.range(of:"^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$", options: .regularExpression) != nil) {
+                                self.emailIdIsValid = true
+                            } else {
+                                self.emailIdIsValid = false
+                            }
+                        }
                     
                     CustomTF(sfIcon: "lock", hint: "Password",isPassword: true, value: $password)
+                        .foregroundStyle(.white)
                         .padding(.top, 5)
                     
                     Button("Forgot Password?") {
                         showForgetPasswordView.toggle()
                     }
+                    .foregroundStyle(.teal)
                     .font(.callout)
                     .fontWeight(.heavy)
                     .tint(Color(UIColor(red: 7/255, green: 71/255, blue: 37/255, alpha: 1)))
@@ -70,13 +84,13 @@ struct Login: View {
                 
                 HStack(spacing: 6) {
                     Text("Dont have an Account?")
-                        .foregroundStyle(.gray)
+                        .foregroundStyle(.white)
                     
                     Button("SignUp") {
                         showLogin = false
                     }
                     .fontWeight(.bold)
-                    .tint(Color(UIColor(red: 7/255, green: 71/255, blue: 37/255, alpha: 1)))
+                    .tint(.teal)
                 }
                 .font(.callout)
                 .hSpacing()
