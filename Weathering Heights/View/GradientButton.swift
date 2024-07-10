@@ -14,18 +14,19 @@ struct GradientButton: View {
     
     var body: some View {
         Button(action: onClick, label: {
-            HStack(spacing: 15) {
+            HStack(alignment: .center, spacing: 15.0) {
                 Text(title)
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                 Image(systemName: icon)
             }
             .fontWeight(.heavy)
-            .foregroundStyle(.black)
+            .foregroundStyle(.white)
             .padding(.vertical, 12)
             .padding(.horizontal, 35)
-            .background(.white
+            .background(.black
                         , in: .capsule)
         })
+        .padding(.trailing, 82.0)
     }
 }
 
