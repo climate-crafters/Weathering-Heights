@@ -35,8 +35,6 @@
 		5E26628E2C3C728400E9A389 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E2662802C3C728400E9A389 /* Rubik-BoldItalic.ttf */; };
 		5E26628F2C3C728400E9A389 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E2662812C3C728400E9A389 /* Rubik-Black.ttf */; };
 		5E2662902C3C728400E9A389 /* Rubik-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E2662822C3C728400E9A389 /* Rubik-ExtraBoldItalic.ttf */; };
-		5E58D17C2C3D9A810046C99A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58D17B2C3D9A810046C99A /* SignUpView.swift */; };
-		5E58D1812C3DA9DC0046C99A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58D1802C3DA9DC0046C99A /* CustomTextField.swift */; };
 		5E920D532C3E86F0005AB775 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E920D522C3E86F0005AB775 /* SettingsView.swift */; };
 		5EC50A422C306620006C137C /* Weathering_HeightsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC50A412C306620006C137C /* Weathering_HeightsApp.swift */; };
 		5EC50A442C306620006C137C /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC50A432C306620006C137C /* WelcomeView.swift */; };
@@ -94,8 +92,6 @@
 		5E2662802C3C728400E9A389 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
 		5E2662812C3C728400E9A389 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
 		5E2662822C3C728400E9A389 /* Rubik-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-		5E58D17B2C3D9A810046C99A /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		5E58D1802C3DA9DC0046C99A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		5E920D522C3E86F0005AB775 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5EC50A3E2C306620006C137C /* Weathering Heights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weathering Heights.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC50A412C306620006C137C /* Weathering_HeightsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weathering_HeightsApp.swift; sourceTree = "<group>"; };
@@ -146,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				5E253EEF2C401D660079865B /* Onboarding */,
-				5E58D17B2C3D9A810046C99A /* SignUpView.swift */,
 				5E920D522C3E86F0005AB775 /* SettingsView.swift */,
 				3805A09F2C3BCC5100A56BBF /* Profile.swift */,
 			);
@@ -193,7 +188,6 @@
 		5E58D17D2C3DA9750046C99A /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				5E58D1802C3DA9DC0046C99A /* CustomTextField.swift */,
 				38E657172C344194004B5F0D /* CustomTF.swift */,
 				388589652C3F022E0007EEA7 /* CustomTF2.swift */,
 				38E657182C344194004B5F0D /* GradientButton.swift */,
@@ -408,11 +402,9 @@
 			files = (
 				3805A0A02C3BCC5100A56BBF /* Profile.swift in Sources */,
 				388589662C3F022E0007EEA7 /* CustomTF2.swift in Sources */,
-				5E58D17C2C3D9A810046C99A /* SignUpView.swift in Sources */,
 				381173FA2C39618700DDBFF1 /* OTPView2.swift in Sources */,
 				388589642C3F00E60007EEA7 /* GradientButton2.swift in Sources */,
 				38D46B8D2C3833F400D482E5 /* OTPView.swift in Sources */,
-				5E58D1812C3DA9DC0046C99A /* CustomTextField.swift in Sources */,
 				5E920D532C3E86F0005AB775 /* SettingsView.swift in Sources */,
 				38E6571F2C344194004B5F0D /* Signup.swift in Sources */,
 				38D46B8B2C38189500D482E5 /* PasswordResetView.swift in Sources */,
