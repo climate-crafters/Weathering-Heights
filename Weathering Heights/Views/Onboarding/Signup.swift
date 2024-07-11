@@ -22,20 +22,18 @@ struct SignUp: View {
    
     var body: some View {
         Text("Tell us more about yourself")
-            .font(.custom("Rubik-Bold", size: 40))
-            .padding(.top, 25)
+            .frame(width: 320)
+            .font(.custom("rubik-medium", size: 30))
             .multilineTextAlignment(.center)
-            .padding(.top, 35)
-            .foregroundColor(.white)
+            .foregroundStyle(.white)
+            .padding(.top, 25)
         
         VStack(alignment: .leading, spacing: 15, content: {
-            
             Text("Please sign up to continue")
                 .foregroundColor(.white)
                 .font(.custom("Rubik-SemiBold", size: 18))
                 .foregroundStyle(.gray)
                 .padding(.top, 60)
-            
             
             VStack(spacing: 20) {
                 /// Custom Text Fields
@@ -43,7 +41,7 @@ struct SignUp: View {
                     .autocapitalization(.none)
                     .foregroundColor(emailIdIsValid ? Color.green : Color.red)
                     .onChange(of: emailId) { newValue in
-                        if(newValue.range(of:"^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$", options: .regularExpression) != nil) {
+                        if newValue.range(of: "^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$", options: .regularExpression) != nil {
                             self.emailIdIsValid = true
                         } else {
                             self.emailIdIsValid = false
@@ -53,10 +51,10 @@ struct SignUp: View {
                 CustomTF(sfIcon: "person", hint: "Full Name", value: $fullName)
                     .padding(.top, 5)
                 
-                CustomTF(sfIcon: "lock", hint: "Password",isPassword: true, value: $password)
+                CustomTF(sfIcon: "lock", hint: "Password", isPassword: true, value: $password)
                     .padding(.top, 5)
                 
-                CustomTF(sfIcon: "lock", hint: "Confirm Password",isPassword: true, value: $ConfirmPassword)
+                CustomTF(sfIcon: "lock", hint: "Confirm Password", isPassword: true, value: $ConfirmPassword)
                     .padding(.top, 5)
                 
                 if !password.isEmpty && !ConfirmPassword.isEmpty && password != ConfirmPassword {
@@ -108,7 +106,6 @@ struct SignUp: View {
         })
     }
 }
-
 
 #Preview {
     LoginView()

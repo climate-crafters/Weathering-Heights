@@ -23,19 +23,20 @@ struct WelcomeView: View {
 
                     Spacer()
 
-                    Text("Dive into weather updates while exploring quizzes and activities designed to promote climate action.")
-                        .frame(width: 320)
-                        .font(.custom("rubik", size: 22))
-                        .foregroundStyle(.white)
-                        .padding(.bottom)
+                    Group {
+                        Text("Dive into weather updates while exploring quizzes and activities designed to promote climate action.")
+                            .frame(width: 320)
+                            .font(.custom("rubik", size: 22))
+                            .foregroundStyle(.white)
 
-                    Text("Let's work together to make a positive impact on our planet, one step at a time.")
-                        .frame(width: 320)
-                        .font(.custom("rubik", size: 22))
-                        .foregroundStyle(.white)
-                        .padding(.vertical)
+                        Text("Let's work together to make a positive impact on our planet, one step at a time.")
+                            .frame(width: 320)
+                            .font(.custom("rubik", size: 22))
+                            .foregroundStyle(.white)
+                    }
+                    .padding()
 
-                    NavigationLink(destination: SignUpView()) {
+                    NavigationLink(destination: LoginView()) {
                         Text("Next")
                             .font(.custom("rubik-medium", size: 18))
                     }
@@ -45,6 +46,7 @@ struct WelcomeView: View {
                     .cornerRadius(40)
                     .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
                     .padding(.bottom, 100)
+                    .padding(.top, 25)
                 }
             }
         }
