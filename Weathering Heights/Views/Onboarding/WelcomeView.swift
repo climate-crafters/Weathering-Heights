@@ -36,7 +36,7 @@ struct WelcomeView: View {
                     }
                     .padding()
 
-                    NavigationLink(destination: LoginView()) {
+                    NavigationLink(destination: LoginView().navigationBarBackButtonHidden(true)) {
                         Text("Next")
                             .font(.custom("rubik-medium", size: 18))
                     }
