@@ -34,8 +34,7 @@ struct PasswordResetView: View {
                 .padding(.top, 10)
                 
                 Text("Reset Password")
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
+                    .font(.custom("Rubik-Bold", fixedSize: 28))
                     .padding(.top, 5)
                 
                 VStack(spacing: 25) {

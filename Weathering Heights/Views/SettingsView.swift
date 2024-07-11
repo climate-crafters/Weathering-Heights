@@ -24,7 +24,7 @@ struct SettingsView: View {
         NavigationStack {
             Form {
                 Section(header: Text("General")) {
-                    NavigationLink("Profile Settings", destination: Profile())
+                    NavigationLink("Profile Settings", destination: Profile().navigationBarBackButtonHidden(true))
                     Toggle("Ambient Sounds", isOn: $shouldPlaySound)
                 }
 

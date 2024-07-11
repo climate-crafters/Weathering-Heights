@@ -32,8 +32,7 @@ struct OTPView2: View {
                 .padding(.top, 10)
                 
                 Text("Enter Otp")
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
+                    .font(.custom("Rubik-Bold", fixedSize: 28))
                     .padding(.top, 5)
                 
                 Text("A 6 digit code has been sent to your Email ID.")

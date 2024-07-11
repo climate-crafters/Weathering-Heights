@@ -41,7 +41,7 @@ struct CustomTF: View {
                                 }
                             }
                         } else {
-                            TextField("", text: $value, prompt: Text(hint).foregroundColor(.gray))
+                            TextField(hint, text: $value)
                                 .font(.custom("Rubik-Regular", fixedSize: 17.5))
                         }
                         
@@ -50,7 +50,9 @@ struct CustomTF: View {
                         /// Password Reval Button
                         if isPassword {
                             Button(action: {
-                                showPassword.toggle()
+                                withAnimation {
+                                    showPassword.toggle()
+                                }
                             }, label: {
                                 Image(systemName: showPassword ? "eye.slash" : "eye")
                                     .foregroundStyle(iconTint)
