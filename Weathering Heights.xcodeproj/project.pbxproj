@@ -77,7 +77,7 @@
 		38E657192C344194004B5F0D /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		38E6571A2C344194004B5F0D /* Signup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		38E657202C34419D004B5F0D /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		5E2662742C3C704C00E9A389 /* Weathering-Heights-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Weathering-Heights-Info.plist"; sourceTree = SOURCE_ROOT; };
+		5E2662742C3C704C00E9A389 /* Weathering-Heights-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Weathering-Heights-Info.plist"; path = "Weathering Heights/Weathering-Heights-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5E2662752C3C728400E9A389 /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBold.ttf"; sourceTree = "<group>"; };
 		5E2662762C3C728400E9A389 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
 		5E2662772C3C728400E9A389 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		5EC50A3E2C306620006C137C /* Weathering Heights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weathering Heights.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC50A412C306620006C137C /* Weathering_HeightsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weathering_HeightsApp.swift; sourceTree = "<group>"; };
 		5EC50A432C306620006C137C /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		5EC50A452C306621006C137C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Weathering Heights/Assets.xcassets"; sourceTree = "<group>"; };
+		5EC50A452C306621006C137C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EC50A482C306621006C137C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5EC50A4E2C306621006C137C /* Weathering HeightsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Weathering HeightsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC50A522C306621006C137C /* Weathering_HeightsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weathering_HeightsTests.swift; sourceTree = "<group>"; };
@@ -200,8 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				5EC50A402C306620006C137C /* Weathering Heights */,
-				5EC50A452C306621006C137C /* Assets.xcassets */,
-				5E2662742C3C704C00E9A389 /* Weathering-Heights-Info.plist */,
 				5EC50A512C306621006C137C /* Weathering HeightsTests */,
 				5EC50A5B2C306621006C137C /* Weathering HeightsUITests */,
 				5EC50A3F2C306620006C137C /* Products */,
@@ -227,6 +225,8 @@
 				38E657152C344188004B5F0D /* Helpers */,
 				5E26626F2C3C6F1100E9A389 /* Fonts */,
 				5EC50A472C306621006C137C /* Preview Content */,
+				5EC50A452C306621006C137C /* Assets.xcassets */,
+				5E2662742C3C704C00E9A389 /* Weathering-Heights-Info.plist */,
 			);
 			path = "Weathering Heights";
 			sourceTree = "<group>";
