@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @State private var shouldPlaySound: Bool = true
+    @AppStorage("sound") private var shouldPlaySound: Bool = true
 
-    @State private var forecastUpdates: String = "Hourly"
-    @State private var temperatureUnit: String = "Celsius"
-    @State private var distanceUnit: String = "Kilometers"
-    @State private var shouldAlert: Bool = true
+    @AppStorage("updates") private var forecastUpdates: String = "Hourly"
+    @AppStorage("temperature") private var temperatureUnit: String = "Celsius"
+    @AppStorage("distance") private var distanceUnit: String = "Kilometers"
+    @AppStorage("alert") private var shouldAlert: Bool = true
 
-    @State private var colorFilter: String = "None"
-    @State private var isHighContrast: Bool = false
-    @State private var isReduceMotion: Bool = false
-    @State private var isScreenRead: Bool = false
+    @AppStorage("color") private var colorFilter: String = "None"
+    @AppStorage("contrast") private var isHighContrast: Bool = false
+    @AppStorage("motion") private var shouldReduceMotion: Bool = false
+    @AppStorage("read") private var shouldScreenRead: Bool = false
+
+    let updateOptions = ["Hourly", "Daily"]
+    let temperatureOptions = ["Celsius", "Fahrenheit"]
+    let distanceOptions = ["Kilometers", "Miles"]
+    let colorOptions = ["None", "Protanopia", "Deuteranopia", "Tritanopia"]
 
     var body: some View {
         NavigationStack {
@@ -30,20 +35,23 @@ struct SettingsView: View {
 
                 Section(header: Text("Weather")) {
                     Picker("Forecast Updates", selection: $forecastUpdates) {
-                        Text("Hourly")
-                        Text("Daily")
+                        ForEach(updateOptions, id: \.self) {
+                            Text($0)
+                        }
                     }
                     .pickerStyle(.navigationLink)
 
                     Picker("Temperature Unit", selection: $temperatureUnit) {
-                        Text("Celsius")
-                        Text("Fahrenheit")
+                        ForEach(temperatureOptions, id: \.self) {
+                            Text($0)
+                        }
                     }
                     .pickerStyle(.navigationLink)
 
                     Picker("Distance Unit", selection: $distanceUnit) {
-                        Text("Kilometers")
-                        Text("Miles")
+                        ForEach(distanceOptions, id: \.self) {
+                            Text($0)
+                        }
                     }
                     .pickerStyle(.navigationLink)
 
@@ -52,16 +60,15 @@ struct SettingsView: View {
 
                 Section(header: Text("Accessibility")) {
                     Picker("Colorblind Filter", selection: $colorFilter) {
-                        Text("None")
-                        Text("Protanopia")
-                        Text("Deuteranopia")
-                        Text("Tritanopia")
+                        ForEach(colorOptions, id: \.self) {
+                            Text($0)
+                        }
                     }
                     .pickerStyle(.navigationLink)
 
                     Toggle("High Contrast", isOn: $isHighContrast)
-                    Toggle("Reduced Motion", isOn: $isReduceMotion)
-                    Toggle("Screen Reader", isOn: $isScreenRead)
+                    Toggle("Reduced Motion", isOn: $shouldReduceMotion)
+                    Toggle("Screen Reader", isOn: $shouldScreenRead)
                 }
             }
             .navigationTitle("Settings")
