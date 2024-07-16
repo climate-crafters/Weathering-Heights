@@ -142,8 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				5E253EEF2C401D660079865B /* Onboarding */,
-				5E920D522C3E86F0005AB775 /* SettingsView.swift */,
-				3805A09F2C3BCC5100A56BBF /* Profile.swift */,
+				5E5275F22C46AFEA00704068 /* Settings */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +182,15 @@
 				5E26627C2C3C728400E9A389 /* Rubik-SemiBoldItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5E5275F22C46AFEA00704068 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5E920D522C3E86F0005AB775 /* SettingsView.swift */,
+				3805A09F2C3BCC5100A56BBF /* Profile.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		5E58D17D2C3DA9750046C99A /* Components */ = {
