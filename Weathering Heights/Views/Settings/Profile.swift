@@ -17,11 +17,12 @@ struct Profile: View {
 
     @State private var selectedPhoto: PhotosPickerItem?
     @State private var showAnimation = true
+    @Environment(\.colorScheme) private var colorScheme
 
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(uiColor: UIColor.secondarySystemBackground)
+                Color(uiColor: colorScheme == .dark ? UIColor.systemBackground : UIColor.secondarySystemBackground)
                     .ignoresSafeArea()
 
                 VStack {

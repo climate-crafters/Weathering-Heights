@@ -8,22 +8,20 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @AppStorage("sound") private var shouldPlaySound: Bool = true
+    @AppStorage("shouldPlaySound") private var shouldPlaySound: Bool = true
 
-    @AppStorage("updates") private var forecastUpdates: String = "Hourly"
-    @AppStorage("temperature") private var temperatureUnit: String = "Celsius"
-    @AppStorage("distance") private var distanceUnit: String = "Kilometers"
-    @AppStorage("alert") private var shouldAlert: Bool = true
+    @AppStorage("temperatureUnit") private var temperatureUnit: String = "°C"
+    @AppStorage("windUnit") private var windUnit: String = "km/h"
+    @AppStorage("precipitationUnit") private var precipitationUnit: String = "mm, cm"
+    @AppStorage("pressureUnit") private var pressureUnit: String = "hPa"
+    @AppStorage("distanceUnit") private var distanceUnit: String = "km"
+    @AppStorage("shouldAlert") private var shouldAlert: Bool = true
 
-    @AppStorage("color") private var colorFilter: String = "None"
-    @AppStorage("contrast") private var isHighContrast: Bool = false
-    @AppStorage("motion") private var shouldReduceMotion: Bool = false
-    @AppStorage("read") private var shouldScreenRead: Bool = false
-
-    let updateOptions = ["Hourly", "Daily"]
-    let temperatureOptions = ["Celsius", "Fahrenheit"]
-    let distanceOptions = ["Kilometers", "Miles"]
-    let colorOptions = ["None", "Protanopia", "Deuteranopia", "Tritanopia"]
+    let temperatureOptions = ["°C", "°F"]
+    let windOptions = ["mph", "km/h", "m/s", "bft", "kn"]
+    let precipitationOptions = ["in", "mm, cm"]
+    let pressureOptions = ["mbar", "inHg", "mmHg", "hPa", "kPa"]
+    let distanceOptions = ["mi", "km"]
 
     var body: some View {
         NavigationStack {
@@ -34,15 +32,29 @@ struct SettingsView: View {
                 }
 
                 Section(header: Text("Weather")) {
-                    Picker("Forecast Updates", selection: $forecastUpdates) {
-                        ForEach(updateOptions, id: \.self) {
+                    Picker("Temperature Unit", selection: $temperatureUnit) {
+                        ForEach(temperatureOptions, id: \.self) {
                             Text($0)
                         }
                     }
                     .pickerStyle(.navigationLink)
 
-                    Picker("Temperature Unit", selection: $temperatureUnit) {
-                        ForEach(temperatureOptions, id: \.self) {
+                    Picker("Wind Unit", selection: $windUnit) {
+                        ForEach(windOptions, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    .pickerStyle(.navigationLink)
+
+                    Picker("Precipitation Unit", selection: $precipitationUnit) {
+                        ForEach(precipitationOptions, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    .pickerStyle(.navigationLink)
+
+                    Picker("Pressure Unit", selection: $pressureUnit) {
+                        ForEach(pressureOptions, id: \.self) {
                             Text($0)
                         }
                     }
@@ -56,19 +68,6 @@ struct SettingsView: View {
                     .pickerStyle(.navigationLink)
 
                     Toggle("Severe Weather Alerts", isOn: $shouldAlert)
-                }
-
-                Section(header: Text("Accessibility")) {
-                    Picker("Colorblind Filter", selection: $colorFilter) {
-                        ForEach(colorOptions, id: \.self) {
-                            Text($0)
-                        }
-                    }
-                    .pickerStyle(.navigationLink)
-
-                    Toggle("High Contrast", isOn: $isHighContrast)
-                    Toggle("Reduced Motion", isOn: $shouldReduceMotion)
-                    Toggle("Screen Reader", isOn: $shouldScreenRead)
                 }
             }
             .navigationTitle("Settings")
