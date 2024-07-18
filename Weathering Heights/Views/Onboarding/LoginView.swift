@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct LoginView: View {
-    /// View Properties
     @State private var showLogin: Bool = false
+
     var body: some View {
-        
         NavigationStack {
             ZStack {
                 Image("Background")
                     .resizable()
                     .ignoresSafeArea()
+
                 VStack {
                     Spacer()
                         .navigationBarBackButtonHidden(true)
+
                     SignUp(showLogin: $showLogin)
                         .navigationDestination(isPresented: $showLogin) {
                             Login(showLogin: $showLogin)

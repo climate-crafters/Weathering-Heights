@@ -29,7 +29,7 @@ struct OTPView: View {
                 })
                 .padding(.top, 10)
                 
-                Text("Enter Otp")
+                Text("Enter OTP")
                     .font(.custom("Rubik-Bold", fixedSize: 28))
                     .padding(.top, 5)
                 
@@ -44,7 +44,7 @@ struct OTPView: View {
                     OTPVerificationView(otpText: $otpText)
                     /// SignUp Button
                     GradientButton2(title: "Verify OTP", icon: "arrow.right") {
-                        ///Code after link sent
+                        /// Code after link sent
                     }
                     .hSpacing(.trailing)
                     /// Disabling Until the Data is Entered
@@ -54,7 +54,6 @@ struct OTPView: View {
             })
             .padding(.vertical, 15)
             .padding(.horizontal, 25)
-            
             .interactiveDismissDisabled()
         }
     }

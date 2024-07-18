@@ -29,18 +29,14 @@ struct SignUp: View {
             .padding(.top, 25)
         
         VStack(alignment: .leading, spacing: 15, content: {
-            Text("Please sign up to continue")
-                .foregroundColor(.white)
-                .font(.custom("Rubik-SemiBold", size: 18))
-                .foregroundStyle(.gray)
-                .padding(.top, 60)
+            Spacer()
             
             VStack(spacing: 20) {
                 /// Custom Text Fields
                 CustomTF(sfIcon: "at", hint: "Email Id", value: $emailId)
                     .autocapitalization(.none)
                     .foregroundColor(emailIdIsValid ? Color.green : Color.red)
-                    .onChange(of: emailId) { newValue in
+                    .onChange(of: emailId) { newValue, _ in
                         if newValue.range(of: "^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$", options: .regularExpression) != nil {
                             self.emailIdIsValid = true
                         } else {
@@ -58,7 +54,7 @@ struct SignUp: View {
                     .padding(.top, 5)
                 
                 if !password.isEmpty && !ConfirmPassword.isEmpty && password != ConfirmPassword {
-                    Text("Password Doesnt Match")
+                    Text("Password Doesn't Match")
                         .foregroundStyle(.red)
                         .font(.callout)
                 }
@@ -77,7 +73,7 @@ struct SignUp: View {
             Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
             
             HStack(spacing: 6) {
-                Text("Already have an Account?")
+                Text("Already have an account?")
                     .font(.custom("Rubik-Regular", size: 18))
                     .foregroundColor(.white)
                     .foregroundStyle(.gray)

@@ -31,7 +31,7 @@ struct OTPView2: View {
                 })
                 .padding(.top, 10)
                 
-                Text("Enter Otp")
+                Text("Enter OTP")
                     .font(.custom("Rubik-Bold", fixedSize: 28))
                     .padding(.top, 5)
                 
@@ -46,7 +46,7 @@ struct OTPView2: View {
                     OTPVerificationView(otpText: $otpText)
                     /// SignUp Button
                     GradientButton2(title: "Verify OTP", icon: "arrow.right") {
-                        ///Code after link sent
+                        /// Code after link sent
                         showResetView.toggle()
                     }
                     .hSpacing(.trailing)
@@ -57,7 +57,6 @@ struct OTPView2: View {
             })
             .padding(.vertical, 15)
             .padding(.horizontal, 25)
-            
             .interactiveDismissDisabled()
             .sheet(isPresented: $showResetView, content: {
                 if #available(iOS 16.4, *) {

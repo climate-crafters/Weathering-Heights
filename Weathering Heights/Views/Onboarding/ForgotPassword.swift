@@ -40,7 +40,7 @@ struct ForgotPassword: View {
                     .font(.custom("Rubik-Bold", fixedSize: 28))
                     .padding(.top, 5)
                 
-                Text("Please enter your Email ID so that we can send the reset link.")
+                Text("Please enter the email associated with your account.")
                     .font(.caption)
                     .foregroundStyle(.gray)
                     .fontWeight(.semibold)
@@ -49,10 +49,10 @@ struct ForgotPassword: View {
                 VStack(spacing: 25) {
                     /// Custom Text Fields
                     CustomTF2(sfIcon: "at", hint: "Email Id", value: $emailId)
-                        .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                        .autocapitalization(/*@START_MENU_TOKEN@*/ .none/*@END_MENU_TOKEN@*/)
                         .foregroundColor(emailIdIsValid ? Color.green : Color.red)
-                        .onChange(of: emailId) { newValue in
-                            if(newValue.range(of:"^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$", options: .regularExpression) != nil) {
+                        .onChange(of: emailId) { newValue, _ in
+                            if newValue.range(of: "^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$", options: .regularExpression) != nil {
                                 self.emailIdIsValid = true
                             } else {
                                 self.emailIdIsValid = false
@@ -61,7 +61,7 @@ struct ForgotPassword: View {
                     
                     /// SignUp Button
                     GradientButton2(title: "Send OTP", icon: "arrow.right") {
-                        ///Code after link sent
+                        /// Code after link sent
                         askOTP.toggle()
                     }
                     .hSpacing(.trailing)
@@ -72,7 +72,6 @@ struct ForgotPassword: View {
             })
             .padding(.vertical, 15)
             .padding(.horizontal, 25)
-            
             .interactiveDismissDisabled()
             .sheet(isPresented: $askOTP, content: {
                 if #available(iOS 16.4, *) {
@@ -87,7 +86,6 @@ struct ForgotPassword: View {
         }
     }
 }
-
 
 #Preview {
     LoginView()

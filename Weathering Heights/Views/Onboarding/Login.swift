@@ -22,6 +22,7 @@ struct Login: View {
             Image("Background")
                 .resizable()
                 .ignoresSafeArea()
+            
             VStack(alignment: .leading, spacing: 15, content: {
                 Button(action: {
                     showLogin = false
@@ -32,12 +33,12 @@ struct Login: View {
                 })
                 .padding(.top, 10)
                 
-                Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
+                Spacer(minLength: 0)
+                
                 Text("Login")
                     .font(.custom("Rubik-Bold", size: 40))
                     .foregroundStyle(.white)
                     
-                
                 Text("Please sign in to continue")
                     .font(.custom("Rubik-Regular", size: 18))
                     .foregroundStyle(.white)
@@ -47,16 +48,16 @@ struct Login: View {
                     /// Custom Text Fields
                     CustomTF(sfIcon: "at", hint: "Email Id", value: $emailId)
                         .autocapitalization(.none)
-                        .foregroundColor(emailIdIsValid ? Color.green : Color.red)
-                        .onChange(of: emailId) { newValue in
-                            if(newValue.range(of:"^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$", options: .regularExpression) != nil) {
+                        .foregroundColor(emailIdIsValid ? .green : .red)
+                        .onChange(of: emailId) { newValue, _ in
+                            if newValue.range(of: "^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$", options: .regularExpression) != nil {
                                 self.emailIdIsValid = true
                             } else {
                                 self.emailIdIsValid = false
                             }
                         }
                     
-                    CustomTF(sfIcon: "lock", hint: "Password",isPassword: true, value: $password)
+                    CustomTF(sfIcon: "lock", hint: "Password", isPassword: true, value: $password)
                         .padding(.top, 5)
                     
                     Button("Forgot Password?") {
@@ -69,19 +70,17 @@ struct Login: View {
                     .hSpacing(.trailing)
                     
                     /// Login Button
-                    GradientButton(title: "Login", icon: "arrow.right") {
-                        
-                    }
-                    .hSpacing(.trailing)
-                    /// Disabling Until the Data is Entered
-                    .disableWithOpacity(emailId.isEmpty || password.isEmpty)
+                    GradientButton(title: "Login", icon: "arrow.right") {}
+                        .hSpacing(.trailing)
+                        /// Disabling Until the Data is Entered
+                        .disableWithOpacity(emailId.isEmpty || password.isEmpty)
                 }
                 .padding(.top, 20)
                 
                 Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
                 
                 HStack(spacing: 6) {
-                    Text("Dont have an Account?")
+                    Text("Don't have an Account?")
                         .foregroundStyle(.white)
                     
                     Button("SignUp") {
@@ -96,7 +95,6 @@ struct Login: View {
             .padding(.vertical, 15)
             .padding(.horizontal, 25)
             .toolbar(.hidden, for: .navigationBar)
-            
             .sheet(isPresented: $showForgetPasswordView, content: {
                 if #available(iOS 16.4, *) {
                     ForgotPassword(showResetView: $showResetView)
@@ -107,7 +105,6 @@ struct Login: View {
                         .presentationDetents([.height(300)])
                 }
             })
-                
         }
     }
 }

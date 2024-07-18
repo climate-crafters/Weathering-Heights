@@ -15,42 +15,44 @@ struct OTPVerificationView: View {
         HStack(spacing: 0) {
             /// OTP Text Box
             /// Change Count Based on your OTP Text Size
-            ForEach(0..<6, id: \.self) {
-                index in OTPTextBox(index)
+            ForEach(0 ..< 6, id: \.self) {
+                index in self.OTPTextBox(index)
             }
         }
-        .background(content : {
-            TextField("", text: $otpText.limit(6))
+        .background(content: {
+            TextField("", text: self.$otpText.limit(6))
                 .keyboardType(.numberPad)
                 .textContentType(.oneTimeCode)
                 /// hiding it out
                 .frame(width: 1, height: 1)
                 .opacity(0.001)
                 .blendMode(.screen)
-                .focused($isKeyboardShowing)
+                .focused(self.$isKeyboardShowing)
         })
         .contentShape(Rectangle())
         /// Opening Keyboard when tapped
         .onTapGesture {
-            isKeyboardShowing.toggle()
+            self.isKeyboardShowing.toggle()
         }
         .toolbar {
             ToolbarItem(placement: .keyboard) {
                 Button("Done") {
-                    isKeyboardShowing.toggle()
+                    self.isKeyboardShowing.toggle()
                 }
                 .frame(maxWidth: .infinity, alignment: .trailing)
             }
         }
     }
-    // Mark: OTP Text Box
+
+    // MARK: OTP Text Box
+
     @ViewBuilder
     func OTPTextBox(_ index: Int) -> some View {
         ZStack {
-            if otpText.count > index {
+            if self.otpText.count > index {
                 /// finding char at index
-                let startIndex = otpText.startIndex
-                let CharIndex = otpText.index(startIndex, offsetBy: index)
+                let startIndex = self.otpText.startIndex
+                let CharIndex = self.otpText.index(startIndex, offsetBy: index)
                 let charToString = String(otpText[CharIndex])
                 Text(charToString)
             } else {
@@ -60,10 +62,10 @@ struct OTPVerificationView: View {
         .frame(width: 45, height: 45)
         .background {
             /// - Highlighting Current Active Box
-            let status = (isKeyboardShowing && otpText.count == index)
+            let status = (isKeyboardShowing && self.otpText.count == index)
             RoundedRectangle(cornerRadius: 6, style: .continuous)
                 .stroke(status ? Color.primary : Color.gray, lineWidth: status ? 1 : 0.5)
-                .animation(.easeInOut(duration: 0.2), value: isKeyboardShowing)
+                .animation(.easeInOut(duration: 0.2), value: self.isKeyboardShowing)
         }
         .frame(maxWidth: .infinity)
     }

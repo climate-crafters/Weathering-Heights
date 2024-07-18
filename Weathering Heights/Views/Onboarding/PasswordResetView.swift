@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct PasswordResetView: View {
-    
     @State private var password: String = ""
     @State private var confirmPassword: String = ""
     
@@ -39,9 +38,9 @@ struct PasswordResetView: View {
                 
                 VStack(spacing: 25) {
                     /// Custom Text Fields
-                    CustomTF2(sfIcon: "lock", hint: "Password",isPassword: true, value: $password)
-                        .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                    CustomTF2(sfIcon: "lock", hint: "Confirm Password",isPassword: true, value: $confirmPassword)
+                    CustomTF2(sfIcon: "lock", hint: "Password", isPassword: true, value: $password)
+                        .autocapitalization(/*@START_MENU_TOKEN@*/ .none/*@END_MENU_TOKEN@*/)
+                    CustomTF2(sfIcon: "lock", hint: "Confirm Password", isPassword: true, value: $confirmPassword)
                         .padding(.top, 5)
                     
                     if !password.isEmpty && !confirmPassword.isEmpty && password != confirmPassword {
@@ -52,19 +51,17 @@ struct PasswordResetView: View {
                     
                     /// SignUp Button
                     GradientButton2(title: "Reset Password", icon: "arrow.right") {
-                        ///Code after link sent
+                        /// Code after link sent
                         /// Reset Password
                     }
                     .hSpacing(.trailing)
                     /// Disabling Until the Data is Entered
                     .disableWithOpacity(password.isEmpty || confirmPassword.isEmpty || password != confirmPassword)
-                    
                 }
                 .padding(.top, 20)
             })
             .padding(.vertical, 15)
             .padding(.horizontal, 25)
-            
             .interactiveDismissDisabled()
         }
     }
